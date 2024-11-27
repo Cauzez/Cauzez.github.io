@@ -1,1 +1,57 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="eelaimet"></p>
+        <p id="nimet"></p>
+        <p id="Huhuu"> </p>
+        <p id="ika"> </p>
+        <p>Var-avainsanaa käytettiin kaikissa JavaScript-koodeissa vuosina 1995–2015.
+
+            Avainsanat let ja const lisättiin JavaScriptiin vuonna 2015.
+            
+            Var-avainsanaa tulee käyttää vain vanhemmille selaimille kirjoitetussa koodissa.</p>
+        <p id="sellane-kappale">Tälläne kappale</p>
+        <button onclick="kappalevaihdos()" type="button">En suosittele painaa</button> 
+        <button onclick="woah()" type="button">siisti tapatuma</button> 
+
+        <button onclick="vesi()" type="button">tuli</button> 
+       
+    </body>
+    <script>
+        function kappalevaihdos() {
+            document.getElementById("sellane-kappale").innerHTML = "Tollane kappale";
+        }
+        function nimi(etunimi, sukunimi) {
+            return "Hei " + etunimi +" "+ sukunimi
+        }
+        document.getElementById("nimet").innerHTML = nimi("max", "rossinen");
+        // Värin muutos
+        function woah() {
+            document.getElementById("sellane-kappale").style.color = "pink";
+        }
+        const luku = 19
+        if (luku < 18) {
+            document.getElementById("ika").innerHTML = "alaikäinen";
+        } else {
+            document.getElementById("ika").innerHTML = "täysi-ikäinen";
+        }
+        let numero = ""
+        let i = 0
+        while (i < 5) {
+            numero += "Huhuu..?" ;
+             i++;
+        }
+        document.getElementById("Huhuu").innerHTML = numero;
+        const elaimet = ["Koira", "Kissa", "Hevonen", "Hiiri", "Marsu"]
+        let eielaimet = ""
+        for (let i = 0; i < elaimet.length; i++) {
+            eielaimet += elaimet[i] + "!<br>";
+        } 
+        document.getElementById("eelaimet").innerHTML = eielaimet;
+    </script>
+</html>
